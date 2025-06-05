@@ -3,12 +3,10 @@ import { type DefaultSession, type NextAuthConfig } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 import { db } from "@/server/db";
-import {
-  accounts,
-  sessions,
-  users,
-  verificationTokens,
-} from "@/server/db/schema";
+import { users } from "../db/schema/users";
+import { accounts } from "../db/schema/accounts";
+import { sessions } from "../db/schema/sessions";
+import { verificationTokens } from "../db/schema/verificationTokens";
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
